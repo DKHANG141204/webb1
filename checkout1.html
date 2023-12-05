@@ -28,7 +28,8 @@
         <link rel="stylesheet" href="css/user.css">
 		<link rel="stylesheet" href="css/searchproduct.css">
 		<link rel="stylesheet" href="css/orderdetail.css">
-
+		<link rel="stylesheet" href="css/napas.css">
+		<link rel="stylesheet" href="css/payment.css">
     </head>
 	<body>
 		<!-- HEADER -->
@@ -431,7 +432,7 @@
 					<div class="row">
 
 						<div class="col-md-3 pull-right ">
-							<button class="dt-button add-new btn btn-primary btn-acpt" onclick=" openPopup()" type="button"><span><span class="d-none d-sm-inline-block">Xác nhận</span></span></button>
+							<button class="dt-button add-new btn btn-primary btn-acpt closet2" onclick=" openPopup()" type="button"><span><span class="d-none d-sm-inline-block">Xác nhận</span></span></button>
 
 						</div>
 					</div>
@@ -515,14 +516,14 @@
 						<div class="title col-md-9 pull-left">Phương thức thanh toán</div>
 						<div class="col-md-3 pull-right">
 							<span>
-								Tiền mặt
+								Trực tuyến
 							</span>
 						</div>
 					</div>
 					<div class="row">
 
 						<div class="col-md-3 pull-right ">
-							<button class="dt-button add-new btn btn-primary btn-acpt" onclick=" openPopup()" type="button"><span><span class="d-none d-sm-inline-block">Xác nhận</span></span></button>
+							<button class="dt-button add-new btn btn-primary btn-acpt closet2" onclick="document.getElementById('khungSuaSanPham3').style.transform = 'scale(1)';" type="button"><span><span class="d-none d-sm-inline-block">Xác nhận</span></span></button>
 
 						</div>
 					</div>
@@ -550,8 +551,132 @@
 					</div>
 				</div>
 		
-		
+				
+<!-- ksp3 -->
+				<div id="khungSuaSanPham3"   class="overlay " style="transform: scale(0);">
+					<div class="card overlayTable">
+						
+						
+        
+       
+							<div class="title">
+								<h4>Chọn một <span style="color: #6064b6">Thanh toán</span> bằng</h4>
+								<button class="closet">
+									×
+								  </button>
+							
+							</div>
+						   
+							
+							<form action="#">
+							 
+								
+					
+								<div class="category1">
+									<label for="visa" class="visaMethod">
+										<div class="imgName">
+											<div class="imgContainer1 visa">
+												<a class="closet2" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';"><img  src="img/visa.png" alt=""></a>
+											</div>
+											<a class="closet2" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';"><span class="name">VISA</span></a>
+										</div>
+										<span class="check1"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+									</label>
+					
+									<label for="napas" class="napasMethod">
+										<div class="imgName">
+											<div class="imgContainer1 napas">
+												<a class="closet2" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';"><img src="img/napas.png" alt=""></a>
+											</div>
+											<a class="closet2" onclick="document.getElementById('khungSuaSanPham4').style.transform = 'scale(1)';"><span  class="name">Napas</span></a>
+										</div>
+										<span class="check1"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+									</label>
+					
+								</div>
+							</form>
+						</div>
+						   
+						</div>
+						
+						
+				</div>
+
+<!-- ksp3 -->
+
+
+<!-- ksp4 -->
+<div id="khungSuaSanPham4"   class="overlay " style="transform: scale(0);">
+	<div class="card overlayTable">
+		<div class="title">Thông tin thanh toán
+			<button class="closet">
+			  ×
+			</button>
+		  </div>
+		<form id="paymentForm">
 			
+			
+			<div class="row ">
+			  <div class="col-md-6  col-md-offset-3 ">
+				<label for="so-the">Số thẻ</label>
+				<input type="text" class="form-control" id="so-the" name="so-the" placeholder="1234567890123456">
+			  </div>
+			  
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<label for="mm-yy">MM/YY</label>
+					<input type="text" class="form-control" id="mm-yy" name="mm-yy" placeholder="12/23">
+				  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-6 col-md-offset-3">
+				<label for="ngay-phat-hanh">Ngày phát hành</label>
+				<input type="text" class="form-control" id="ngay-phat-hanh" name="ngay-phat-hanh" placeholder="12/2022">
+			  </div>
+			  
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<label for="ten-chu-the">Tên chủ thẻ (không dấu)</label>
+					<input type="text" class="form-control" id="ten-chu-the" name="ten-chu-the" placeholder="Nguyen Van A">
+				  </div>
+			</div>
+		   
+			<div class="row">
+				<div class="col-md-6  col-md-offset-3 checksubmit">
+					<input  class="checks" type="checkbox" id="dieu-kien-su-dung" name="dieu-kien-su-dung">
+					<label class="labels" for="dieu-kien-su-dung">Đồng ý với <a href="#">điều kiện sử dụng</a></label>
+				  </div>
+			</div>
+			
+			
+			 
+			
+			<div class="row">
+			  <div class="col-md-6 col-md-offset-3">
+				<button type="submit" class="btn btn-primary btnform">Xác thực</button>
+				<button type="reset" class="btn btn-secondary btnform">Hủy</button>
+			  </div>
+			</div>
+		
+		  </form>
+		
+		</div>
+		
+		
+
+	
+		   
+		</div>
+		
+		
+
+<!-- ksp4 -->
+
+
+
+
 			
 
 		<!-- NEWSLETTER -->
@@ -691,36 +816,40 @@
      function toggleMenu(){
        subMenu.classList.toggle("open-menu");
      }
+	
 
-	 function closeKhungSuaSanPham() {
-  const activeKhungSuaSanPham = document.querySelector(".active-popup");
-  if (activeKhungSuaSanPham) {
-    activeKhungSuaSanPham.style.display = "none";
-  }
-}
+
+	
+
 
 let popup = document.getElementById("popup");
 
 function openPopup() {
-  // Hide the currently active khungSuaSanPham
-  closeKhungSuaSanPham();
 
-  // Add the open-popup class to the popup
+  
   popup.classList.add("open-popup");
 }
 
 document.querySelector(".btn-acpt").addEventListener("click", function (event) {
   event.preventDefault();
 
-  // Open the popup
+  
   openPopup();
 });
-   function closePopup(){
-		  popup.classList.remove("open-popup");
-	   }
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
 
 	 
 	 document.querySelectorAll('.closet').forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+          const overlay = closeButton.closest('.overlay');
+          overlay.style.transform = 'scale(0)';
+        });
+      });
+
+	  document.querySelectorAll('.closet2').forEach(function(closeButton) {
         closeButton.addEventListener('click', function() {
           const overlay = closeButton.closest('.overlay');
           overlay.style.transform = 'scale(0)';

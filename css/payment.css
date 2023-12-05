@@ -1,17 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
 
-.container{
+.container1{
     width: 400px;
     border-radius: 8px;
     padding: 40px;
@@ -20,16 +9,16 @@ body{
                 0 18px 36px -6px rgba(0, 0, 0, 0.1);
 }
 
-.container .title{
+.container1 .title{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container form input{
+.container1 form input{
     display: none;
 }
 
-.container form .category{
+.container1 form .category{
     margin-top: 10px;
     padding-top: 20px;
 
@@ -38,7 +27,7 @@ body{
     grid-gap: 15px;
 }
 
-.category label{
+.category1 label{
     /* width: 100%; */
     /* height: 65px; */
     height: 145px;
@@ -88,7 +77,7 @@ label .imgName{
     transform: translateY(-72%);
 }
 
-.imgName .imgContainer{
+.imgName .imgContainer1{
     width: 50px;
     display: flex;
     justify-content: center;
@@ -99,10 +88,6 @@ label .imgName{
     transform: translateY(-35%);
 }
 
-img{
-    width: 50px;
-    height: auto;
-}
 
 .visa img{
     width: 80px;
@@ -115,14 +100,14 @@ img{
 
 
 
-.check{
+.check1{
     display: none;
     position: absolute;
     top: -4px;
     right: -4px;
 }
 
-.check i{
+.check1 i{
     font-size: 18px;
 }
 
