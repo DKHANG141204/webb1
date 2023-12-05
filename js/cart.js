@@ -110,7 +110,9 @@ function displayCart()
       <th class="price-tab" style="width: 20%;" ><div class="cart-item-price">${item.price}.000.000₫</div></th>
       <th class="quantity-tab" style="width: 20%;">
           <div class="cart-input">
+						<span class="qty-decreas" atyle="border:"1px"">-</span>
 					  <input type="number" value="${item.inCart}" min="0" class="cart-input-number">
+            <span class="qty-encreas" >+</span>
           </div>
       </th>
       <th  class= "total-tab" style="width: 20%;"><div class="cart-item-total">${item.inCart*item.price}.000.000₫</div></th>

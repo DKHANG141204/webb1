@@ -148,6 +148,12 @@
     padding: 0 8%;
     font-size: initial;
 }
+.title1{
+    color: #1964af;
+    font-weight: 600;
+    margin-bottom: 2vh;
+    font-size: initial;
+}
 #details{
     font-weight: 400;
 }
@@ -345,7 +351,7 @@
     width: 100%;
     margin-top: 50px;
     padding:10px 0;
-    background: #6fd649;
+    background: #002F56;
     color: #fff;
     border: 0;
     outline: none;
@@ -353,4 +359,8 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+.mtop{
+    margin-top: 20px;
 }
