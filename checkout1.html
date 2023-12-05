@@ -281,19 +281,19 @@
 								</label>
 								<div class="caption">
 									<div class="form-group">
-										<input class="input" type="text" id="name-new" name="first-name" placeholder="Họ và Tên" required>
+										<input class="input" type="text" id="name-new" name="first-name" placeholder="Họ và Tên" >
 									</div>
 									
 									<div class="form-group">
-										<input class="input" type="email" id="email-new" name="email" placeholder="Email" required>
+										<input class="input" type="email" id="email-new" name="email" placeholder="Email" >
 									</div>
 									<div class="form-group">
-										<input class="input" type="text" id="address-new" name="address" placeholder="Địa chỉ" required>
+										<input class="input" type="text" id="address-new" name="address" placeholder="Địa chỉ" >
 									</div>
 							
 								
 									<div class="form-group">
-										<input class="input" type="tel" id="tele-new" name="tel" placeholder="Số điện thoại" required>
+										<input class="input" type="tel" id="tele-new" name="tel" placeholder="Số điện thoại" >
 									</div>
 								</div>
 							</div>
@@ -650,7 +650,7 @@
 			
 			<div class="row mtop">
 			  <div class="col-md-8 col-md-offset-2">
-				<button type="submit" class="btn btn-primary btnform closet2" onclick=" openPopup()">Xác thực</button>
+				<button type="submit" class="btn btn-primary btnform closet2" onclick=" checkout1()">Xác thực</button>
 				<button type="reset" class="btn btn-secondary btnform closet2 ">Hủy</button>
 			  </div>
 			</div>
@@ -836,6 +836,34 @@ function closePopup() {
   popup.classList.remove("open-popup");
 }
 
+
+
+	function checkout1(){
+		let soThe = document.getElementById("so-the").value;
+		let MMYY = document.getElementById("mm-yy").value;
+		let ngayPH = document.getElementById("ngay-phat-hanh").value;
+		let tenChuThe = document.getElementById("ten-chu-the").value;
+
+
+		if(!soThe){
+			alert("Vui lòng nhập số thẻ!");
+			return;
+		}
+		else if(!MMYY){
+			alert("Vui lòng nhập tháng năm!!");
+			return;
+		}
+		 else if(!soThe){
+			alert("Vui lòng nhập ngày phát hành!!");
+			return;
+		}
+		 else if (!soThe){
+			alert("Vui lòng nhập tên chủ thẻ!");
+			return;
+		}
+		else{openPopup();
+		}
+	}
 	 
 	 document.querySelectorAll('.closet').forEach(function(closeButton) {
         closeButton.addEventListener('click', function() {

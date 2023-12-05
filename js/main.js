@@ -419,14 +419,28 @@ function checkout() {
 	const khungSuaSanPham1 = document.getElementById("khungSuaSanPham1");
 	const khungSuaSanPham2 = document.getElementById("khungSuaSanPham2");
   
+	
 	if (checkboxAddress.checked) {
 
-		if(!nameNew.checked || !addressNew.checked || !telephoneNew.checked || !emailNew.checked ){
-			alert("Vui lòng nhập đầy đủ thông tin! ");
-			
+		if(!emailNew){
+			alert("Vui lòng nhập địa chỉ email!");
 			return;
 		}
+		if(!addressNew){
+			alert("Vui lòng nhập địa chỉ!");
+			return;
+
+		}
+		if(!nameNew){
+			alert("Vui lòng nhập họ tên!");
+			return;
+
+		}
 	 
+		if(!telephoneNew){
+			alert("Vui lòng nhập số điện thoại!");
+			return;
+		}
 	  khungSuaSanPham1.querySelector(".info .addressn #details").innerHTML = addressNew;
 	  khungSuaSanPham1.querySelector(".info .nameneww #details").innerHTML = nameNew;
 	  khungSuaSanPham1.querySelector(".info .telephonee #details").innerHTML = telephoneNew;
@@ -434,6 +448,7 @@ function checkout() {
 	  khungSuaSanPham2.querySelector(".info .addressn #details").innerHTML = addressNew;
 	  khungSuaSanPham2.querySelector(".info .nameneww #details").innerHTML = nameNew;
 	  khungSuaSanPham2.querySelector(".info .telephonee #details").innerHTML = telephoneNew;
+	  
 	} else {
 	
 	  const addressOld = khungSuaSanPham1.querySelector(".info .addressn #details").innerHTML;
