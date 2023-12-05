@@ -420,6 +420,12 @@ function checkout() {
 	const khungSuaSanPham2 = document.getElementById("khungSuaSanPham2");
   
 	if (checkboxAddress.checked) {
+
+		if(!nameNew.checked || !addressNew.checked || !telephoneNew.checked || !emailNew.checked ){
+			alert("Vui lòng nhập đầy đủ thông tin! ");
+			
+			return;
+		}
 	 
 	  khungSuaSanPham1.querySelector(".info .addressn #details").innerHTML = addressNew;
 	  khungSuaSanPham1.querySelector(".info .nameneww #details").innerHTML = nameNew;
