@@ -523,7 +523,7 @@
 					<div class="row">
 
 						<div class="col-md-3 pull-right ">
-							<button class="dt-button add-new btn btn-primary btn-acpt closet2" onclick="document.getElementById('khungSuaSanPham3').style.transform = 'scale(1)';" type="button"><span><span class="d-none d-sm-inline-block">Xác nhận</span></span></button>
+							<button class="dt-button add-new btn btn-primary  closet2" onclick="document.getElementById('khungSuaSanPham3').style.transform = 'scale(1)'; " type="button"><span><span class="d-none d-sm-inline-block">Xác nhận</span></span></button>
 
 						</div>
 					</div>
@@ -568,7 +568,7 @@
 							</div>
 						   
 							
-							<form action="#">
+							<form >
 							 
 								
 					
@@ -619,27 +619,22 @@
 			<div class="row ">
 			  <div class="col-md-8  col-md-offset-2 ">
 				<label for="so-the">Số thẻ</label>
-				<input type="text" class="form-control" id="so-the" name="so-the" placeholder="1234567890123456" >
+				<input type="text" class="form-control" id="so-the"  name="so-the" placeholder="1234567890123456" >
 			  </div>
 			  
 			</div>
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<label for="mm-yy">MM/YY</label>
-					<input type="text" class="form-control" id="mm-yy" name="mm-yy" placeholder="12/23" >
-				  </div>
-			</div>
+			
 			<div class="row">
 			  <div class="col-md-8 col-md-offset-2">
 				<label for="ngay-phat-hanh">Ngày phát hành</label>
-				<input type="text" class="form-control" id="ngay-phat-hanh" name="ngay-phat-hanh" placeholder="12/2022" >
+				<input type="text" class="form-control" id="ngay-phat-hanh"   name="ngay-phat-hanh" placeholder="12/23" >
 			  </div>
 			  
 			</div>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<label for="ten-chu-the">Tên chủ thẻ (không dấu)</label>
-					<input type="text" class="form-control" id="ten-chu-the" name="ten-chu-the" placeholder="Nguyen Van A" >
+					<input type="text" class="form-control" id="ten-chu-the"  name="ten-chu-the" placeholder="Nguyen Van A" >
 				  </div>
 			</div>
 		   
@@ -650,7 +645,7 @@
 			
 			<div class="row mtop">
 			  <div class="col-md-8 col-md-offset-2">
-				<button type="submit" class="btn btn-primary btnform closet2" onclick=" openPopup()">Xác thực</button>
+				<button type="button" class="btn btn-primary  " onclick=" checkout1()">Xác thực</button>
 				<button type="reset" class="btn btn-secondary btnform closet2 ">Hủy</button>
 			  </div>
 			</div>
@@ -820,12 +815,10 @@
 let popup = document.getElementById("popup");
 
 function openPopup() {
-
-  
   popup.classList.add("open-popup");
 }
 
-document.querySelector(".btn-acpt").addEventListener("click", function (event) {
+document.querySelector(".btnform").addEventListener("click", function (event) {
   event.preventDefault();
 
   
@@ -838,6 +831,36 @@ function closePopup() {
 
 
 
+
+          
+      
+	function checkout1(){
+		let soThe = document.getElementById('so-the').value;
+		let ngayPH = document.getElementById('ngay-phat-hanh').value;
+		let tenChuThe = document.getElementById('ten-chu-the').value;
+
+		if( !soThe){
+			alert("Vui lòng nhập số thẻ!");
+			return;
+		}
+
+ 		 if( !ngayPH){
+			alert("Vui lòng nhập ngày phát hành!");
+			return;
+		}
+		
+		if( !tenChuThe){
+			alert("Vui lòng nhập tên chủ thẻ!");
+			return;
+		}
+		
+		document.getElementById('khungSuaSanPham4').style.display = 'none';
+		
+		openPopup();
+
+
+		
+	}
 	
 	 
 	 document.querySelectorAll('.closet').forEach(function(closeButton) {
@@ -847,6 +870,8 @@ function closePopup() {
         });
       });
 
+	  
+
 	  document.querySelectorAll('.closet2').forEach(function(closeButton) {
         closeButton.addEventListener('click', function() {
           const overlay = closeButton.closest('.overlay');
@@ -854,7 +879,7 @@ function closePopup() {
         });
       });
 
-
+	  
 
 
    </script>
